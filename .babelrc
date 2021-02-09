@@ -1,0 +1,31 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": "last 2 versions, not dead"
+          },
+          "useBuiltIns": "entry"
+        }]
+      ]
+    },
+    "test": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "node": "current"
+          }
+        }]
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "@babel/plugin-proposal-class-properties", {"loose": true}
+    ]
+  ]
+}
